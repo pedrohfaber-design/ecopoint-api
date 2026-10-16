@@ -1,0 +1,9 @@
+pub mod collection_point_repository;
+pub mod dashboard_repository;
+pub mod disposal_repository;
+pub mod disposal_request_repository;
+pub mod user_dashboard_repository;
+pub mod user_repository;
+pub mod waste_type_repository;
+pub mod chat_message_repository;
+pub mod password_reset_repository;

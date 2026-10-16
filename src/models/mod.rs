@@ -1,0 +1,9 @@
+pub mod collection_point;
+pub mod disposal_item;
+pub mod disposal_request;
+pub mod request_status;
+pub mod user;
+pub mod user_role;
+pub mod waste_type;
+pub mod disposal_request_details;
+pub mod chat_message;

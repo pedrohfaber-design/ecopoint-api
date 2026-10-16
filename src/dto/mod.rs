@@ -1,0 +1,13 @@
+pub mod create_collection_point;
+pub mod create_disposal_request;
+pub mod create_user;
+pub mod create_waste_type;
+pub mod dashboard_stats;
+pub mod login_user;
+pub mod update_collection_point;
+pub mod update_user;
+pub mod update_waste_type;
+pub mod user_dashboard;
+pub mod create_chat_message;
+pub mod forgot_password;
+pub mod reset_password;
