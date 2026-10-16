@@ -48,11 +48,14 @@ async fn main() {
     // Estado compartilhado
     let state = AppState::new(pool, settings.clone());
 
+let frontend_url = std::env::var("FRONTEND_URL")
+    .unwrap_or_else(|_| "http://localhost:5173".to_string());
+
 let cors = CorsLayer::new()
     .allow_origin(
-        "http://localhost:5173"
+        frontend_url
             .parse::<HeaderValue>()
-            .unwrap(),
+            .expect("FRONTEND_URL invalida"),
     )
     .allow_methods([
         Method::GET,
