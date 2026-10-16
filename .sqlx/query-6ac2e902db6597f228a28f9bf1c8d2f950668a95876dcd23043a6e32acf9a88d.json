@@ -1,0 +1,40 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        SELECT\n            di.id,\n            di.waste_type_id,\n            wt.name AS waste_type_name,\n            di.quantity\n\n        FROM disposal_items di\n\n        INNER JOIN waste_types wt\n            ON wt.id = di.waste_type_id\n\n        WHERE di.request_id = $1\n\n        ORDER BY wt.name\n        ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "waste_type_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "waste_type_name",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "quantity",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "6ac2e902db6597f228a28f9bf1c8d2f950668a95876dcd23043a6e32acf9a88d"
+}

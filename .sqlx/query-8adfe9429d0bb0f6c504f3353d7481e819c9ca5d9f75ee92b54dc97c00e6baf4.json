@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE waste_types\n            SET\n                name = $1,\n                description = $2\n            WHERE id = $3\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Text",
+        "Uuid"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "8adfe9429d0bb0f6c504f3353d7481e819c9ca5d9f75ee92b54dc97c00e6baf4"
+}

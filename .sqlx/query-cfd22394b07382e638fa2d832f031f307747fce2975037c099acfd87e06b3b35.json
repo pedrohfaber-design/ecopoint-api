@@ -1,0 +1,23 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        UPDATE collection_points\n        SET\n            name = $1,\n            description = $2,\n            address = $3,\n            city = $4,\n            state = $5,\n            latitude = $6,\n            longitude = $7,\n            phone = $8,\n            email = $9,\n            updated_at = NOW()\n        WHERE id = $10\n        ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Text",
+        "Varchar",
+        "Varchar",
+        "Bpchar",
+        "Float8",
+        "Float8",
+        "Varchar",
+        "Varchar",
+        "Uuid"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "cfd22394b07382e638fa2d832f031f307747fce2975037c099acfd87e06b3b35"
+}

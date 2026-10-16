@@ -1,0 +1,19 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO disposal_requests\n            (\n                id,\n                user_id,\n                collection_point_id,\n                status,\n                created_at,\n                updated_at\n            )\n            VALUES\n            (\n                $1,\n                $2,\n                $3,\n                $4,\n                $5,\n                $6\n            )\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Uuid",
+        "Uuid",
+        "Varchar",
+        "Timestamptz",
+        "Timestamptz"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "a1d27289d982a830affb8bbc003b4271ee42fc873dce3ac95d5b2e1692eb3f30"
+}

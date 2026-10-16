@@ -1,0 +1,70 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n        SELECT\n            dr.id,\n            dr.user_id,\n            dr.collection_point_id,\n\n            cp.name AS collection_point_name,\n            cp.city AS collection_point_city,\n            cp.state AS collection_point_state,\n\n            dr.status AS \"status: RequestStatus\",\n            dr.created_at,\n            dr.updated_at\n\n        FROM disposal_requests dr\n\n        INNER JOIN collection_points cp\n            ON cp.id = dr.collection_point_id\n\n        WHERE dr.id = $1\n        ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "user_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "collection_point_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 3,
+        "name": "collection_point_name",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 4,
+        "name": "collection_point_city",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 5,
+        "name": "collection_point_state",
+        "type_info": "Bpchar"
+      },
+      {
+        "ordinal": 6,
+        "name": "status: RequestStatus",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 7,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 8,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "afb913b162cf2349a3278612b8593d6a1e0b05bba2fa9d1b52f51739a8692bf8"
+}
